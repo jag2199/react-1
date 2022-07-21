@@ -1,3 +1,4 @@
+import CartWidget from "./CartWidget/CartWidget"
 function NavBar() {
     return (<div>
         <h1>REPUBLICA DE 1905</h1>
@@ -7,6 +8,7 @@ function NavBar() {
             <li>Ofertas</li>
             <li>Redes</li>
         </ul>
+        <CartWidget />
     </div >)
 }
 
