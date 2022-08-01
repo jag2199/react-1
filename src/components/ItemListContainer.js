@@ -25,9 +25,13 @@ function ItemListContainer(props) {
 
     })
 
+    const onAdd = (cant) => {
+        console.log(`${cant} producto/s agregado/s al carrito`)
+    }
+
     return (<div>
         {props.greeting}
-        {/* <ItemCount stock={10} initial={1} /> */}
+        {<ItemCount stock={10} initial={1} onAdd={onAdd} />}
         <ItemList items={items} />
     </div >)
 }
