@@ -1,20 +1,12 @@
 import { useEffect, useState } from "react"
-import ItemCount from "./ItemCount"
-import ItemList from "./ItemList"
+import ItemCount from "../ItemCount"
+import ItemList from "../ItemList"
+import mock from "./mockILC"
 
 const products = [{ id: 1, title: "Remera ERREA 2022 Titular", description: "Belgrano", price: 2000, pictureURL: "sdoaihdoias" }]
 
 function ItemListContainer(props) {
     const [items, setItems] = useState([])
-
-    const mock = () => {
-        const algo = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(products)
-            }, 2000);
-        })
-        return algo
-    }
 
     useEffect(() => {
         setTimeout(() => {
