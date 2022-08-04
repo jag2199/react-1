@@ -1,26 +1,29 @@
 import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail"
 import getItem from "./mockIDC"
+import ItemCount from "../ItemCount"
+import { useParams } from "react-router-dom"
 
-function ItemDetailContainer() {
-    const [items, setItems] = useState([])
+export default function ItemDetailContainer() {
+    const [item, setItem] = useState([])
+    const { idProd } = useParams()
 
     useEffect(() => {
         setTimeout(() => {
-            getItem()
-                .then(item => setItems(item))
+            getItem(idProd)
+                .then(product => setItem(product))
         }, 2000)
 
-    })
+    }, [idProd])
+
+    const onAdd = (cant) => {
+        console.log(`${cant} producto/s agregado/s al carrito`)
+    }
 
     return (
         <div>
-            {
-                items.map((item) => (<ItemDetail key={item.id} item={item} />))
-            }
+            <ItemDetail item={item} />
+            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
         </div >
     )
 }
-
-
-export default ItemDetailContainer
