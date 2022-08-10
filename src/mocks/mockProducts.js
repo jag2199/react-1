@@ -1,9 +1,9 @@
-import products from "../../products"
+import products from "../products.js"
 
-export default function getItem(id) {
+export default function getItems() {
     const task = new Promise((resolve) => {
         setTimeout(() => {
-            resolve(products[id])
+            resolve(products)
         }, 2000);
     })
     return task

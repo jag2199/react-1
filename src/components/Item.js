@@ -1,6 +1,9 @@
 import Card from 'react-bootstrap/Card'
 
+const categorias = ["Remera", "Short", "Otros"]
+
 export default function Item(item) {
+    console.log("Soy el item", item)
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={item.url} />
@@ -8,6 +11,8 @@ export default function Item(item) {
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text>
                     {item.description}
+
+                    Categoría: {categorias[item.category]}
                 </Card.Text>
                 <Card.Footer>
                     {item.price}

@@ -1,8 +1,10 @@
 import NavBar from "./components/NavBar"
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
+import ItemListContainer from "./components/ItemListContainer"
 import './App.css'
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+const greeting = "AGUANTE BELGRANO"
 
 function App() {
   return (
@@ -10,9 +12,9 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<ItemListContainer greeting="AGUANTE BELGRANO" />} />
-          <Route exact path="/category/:id" element={<ItemListContainer />} />
-          <Route exact path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/" element={<ItemListContainer greeting={greeting} />} />
+          <Route path="/category/:idCat" element={<ItemListContainer greeting={greeting} />} />
+          <Route path="/item/:idProd" element={<ItemDetailContainer />} />
         </Routes>
       </div>
     </BrowserRouter>

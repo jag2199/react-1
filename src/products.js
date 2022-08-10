@@ -4,7 +4,7 @@ const products = [{
     title: "Remera Errea 2022 Titular",
     description: "Remera CAB titular 2022",
     price: 12000,
-    url: "https://via.placeholder.com/150/771796",
+    url: "C:/Users/J. Agustin/Desktop/vscode/react-1/my-app/src/logoCab.png",
     stock: 10
 },
 {
@@ -67,7 +67,7 @@ const products = [{
     title: "Medias Errea 2022",
     description: "Medias CAB 2022",
     price: 5000,
-    url: "https://via.placeholder.com/150/771796",
+    url: "./logoCab.png",
     stock: 10
 },
 {
