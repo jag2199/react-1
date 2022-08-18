@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import ItemDetail from "./ItemDetail"
 import getItems from "../mocks/mockProducts"
-import ItemCount from "./ItemCount"
 import { useParams } from "react-router-dom"
 
 export default function ItemDetailContainer() {

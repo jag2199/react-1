@@ -1,9 +1,7 @@
 import { useState } from "react"
-import Item from "./Item"
 
 export default function ItemCount({ stock, initial, onAdd }) {
     const [cantidad, setCantidad] = useState(initial)
-    // const [stockActual, setStock] = useState(stock)
 
     const add = () => {
         cantidad < stock

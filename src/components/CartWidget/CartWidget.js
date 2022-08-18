@@ -1,6 +1,17 @@
 import carritoImg from "./carrito.png"
-function CartWidget() {
-    return (<img src={carritoImg} alt="carrito" />)
-}
+import { useCart } from "../CartContext"
 
-export default CartWidget
+export default function CartWidget() {
+    const { cantInCart } = useCart()
+    console.log("Articulos:", cantInCart)
+    return (
+        cantInCart
+            ?
+            <>
+                <img src={carritoImg} alt="carrito" />
+                {cantInCart}
+            </>
+            :
+            <></>
+    )
+}
