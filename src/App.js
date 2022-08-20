@@ -5,6 +5,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import CartProvider from "./components/CartContext"
 import Cart from "./components/Cart"
+
 const greeting = "AGUANTE BELGRANO"
 
 function App() {
