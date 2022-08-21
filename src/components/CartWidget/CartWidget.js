@@ -3,13 +3,13 @@ import { useCart } from "../CartContext"
 
 export default function CartWidget() {
     const { cantInCart } = useCart()
-    console.log("Articulos:", cantInCart)
+    console.log("Articulos:", cantInCart())
     return (
-        cantInCart
+        cantInCart()
             ?
             <>
                 <img src={carritoImg} alt="carrito" />
-                {cantInCart}
+                {cantInCart()}
             </>
             :
             <></>

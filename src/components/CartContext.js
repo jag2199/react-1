@@ -5,14 +5,21 @@ export const CartContext = createContext()
 export default function CartProvider({ children }) {
     const [cart, setCart] = useState([])
 
-    const addItem = (item, quantity) => {
-        if (!isInCart(item.id)) {
-            const newCart = cart.push({ ...item, quantity })
-            setCart(newCart)
-            console.log(quantity, item.title, "agregado/s correctamente")
-            console.log(cart)
+    const addItem = (product, quantity) => {
+        // if (!isInCart(item.id)) {
+        //     const newCart = cart.push({ ...item, quantity })
+        //     setCart(newCart)
+        //     console.log(quantity, item.title, "agregado/s correctamente")
+        //     console.log(cart)
+        // } else {
+        //     console.log("Este producto ya se encuentra en el carrito")
+        // }
+        if (isInCart(product.id)) {
+            const index = cart.findIndex((element) => element.item.id === product.id);
+            cart[index].quantity = cart[index].quantity + quantity;
+            setCart([...cart]);
         } else {
-            console.log("Este producto ya se encuentra en el carrito")
+            setCart([...cart, { ...product, quantity }]);
         }
     }
 
@@ -28,9 +35,9 @@ export default function CartProvider({ children }) {
         return cart.length ? cart.some((item) => item.id === id) : false
     }
 
-    const cantInCart = cart.length ? cart.reduce((total, item) => total += item.quantity, 0) : 0
+    function cantInCart() { return cart.length ? cart.reduce((total, item) => total += item.quantity, 0) : 0 }
 
-    const totalCart = cart.length ? cart.reduce((total, item) => total += (item.quantity * item.price), 0) : 0
+    function totalCart() { return cart.length ? cart.reduce((total, item) => total += (item.quantity * item.price), 0) : 0 }
 
     return (
         <CartContext.Provider value={{ cart, addItem, removeItem, clear, isInCart, cantInCart, totalCart }}>
