@@ -15,11 +15,11 @@ export default function CartProvider({ children }) {
         //     console.log("Este producto ya se encuentra en el carrito")
         // }
         if (isInCart(product.id)) {
-            const index = cart.findIndex((element) => element.item.id === product.id);
-            cart[index].quantity = cart[index].quantity + quantity;
-            setCart([...cart]);
+            const index = cart.findIndex((element) => element.id === product.id)
+            cart[index].quantity = cart[index].quantity + quantity
+            setCart([...cart])
         } else {
-            setCart([...cart, { ...product, quantity }]);
+            setCart([...cart, { ...product, quantity }])
         }
     }
 

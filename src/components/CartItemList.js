@@ -11,7 +11,7 @@ export default function CartItemList({ cart, clear }) {
         //     })}
         // </div>
 
-        <Table striped bordered hover>
+        <Table striped bordered hover align='center'>
             <thead>
                 <tr>
                     <th>#</th>

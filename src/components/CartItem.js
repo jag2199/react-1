@@ -1,7 +1,4 @@
-import Card from 'react-bootstrap/Card'
 import { useCart } from "./CartContext"
-
-const categorias = ["Remera", "Short", "Otros"]
 
 export default function Item({ item }) {
     const { removeItem } = useCart()

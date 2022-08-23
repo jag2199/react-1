@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from "./ItemList"
-import { getItems } from "../mocks/mockProducts"
 import { collection, getDocs, getFirestore, where, query } from "firebase/firestore"
 import { initializeApp } from "firebase/app";
 

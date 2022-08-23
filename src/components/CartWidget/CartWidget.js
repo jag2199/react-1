@@ -1,5 +1,6 @@
 import carritoImg from "./carrito.png"
 import { useCart } from "../CartContext"
+import { Link } from "react-router-dom"
 
 export default function CartWidget() {
     const { cantInCart } = useCart()
@@ -8,7 +9,7 @@ export default function CartWidget() {
         cantInCart()
             ?
             <>
-                <img src={carritoImg} alt="carrito" />
+                <Link to="/cart"><img src={carritoImg} alt="carrito" /></Link>
                 {cantInCart()}
             </>
             :

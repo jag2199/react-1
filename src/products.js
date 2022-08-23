@@ -1,13 +1,13 @@
+// {
+//     id: 1,
+//     category: 1,
+//     title: "Remera Errea 2022 Titular",
+//     description: "Remera CAB titular 2022",
+//     price: 12000,
+//     url: "C:/Users/J. Agustin/Desktop/vscode/react-1/my-app/src/logoCab.png",
+//     stock: 10
+// },
 const products = [{
-    id: 1,
-    category: 1,
-    title: "Remera Errea 2022 Titular",
-    description: "Remera CAB titular 2022",
-    price: 12000,
-    url: "C:/Users/J. Agustin/Desktop/vscode/react-1/my-app/src/logoCab.png",
-    stock: 10
-},
-{
     id: 2,
     category: 1,
     title: "Remera Errea 2022 Suplente",
@@ -80,5 +80,13 @@ const products = [{
     stock: 10
 }
 ]
+const db = getFirestore()
 
+const ordersCollection = collection(db, "itemCollection")
+
+for (product in products) {
+    addDoc(ordersCollection, newOrder)
+        .then(console.log("Compra guardada"))
+
+}
 export default products
