@@ -10,25 +10,26 @@ export default function CartItemList({ cart, clear }) {
         //         )
         //     })}
         // </div>
-
-        <Table striped bordered hover align='center'>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Subtotal</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {cart.map((item) => {
-                    return (
-                        <CartItem key={item.id} item={item} />
-                    )
-                })}
-            </tbody>
-        </Table>
+        <div className="w-75 justify-content-center align-items-center">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {cart.map((item) => {
+                        return (
+                            <CartItem key={item.id} item={item} />
+                        )
+                    })}
+                </tbody>
+            </table>
+        </div>
     )
 }

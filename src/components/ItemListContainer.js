@@ -49,7 +49,7 @@ function ItemListContainer(props) {
         items.length !== 0
             ? (
                 <div>
-                    {props.greeting}
+                    <h1>{props.greeting}</h1>
                     <ItemList items={items} />
                 </div >
             )

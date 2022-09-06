@@ -8,10 +8,10 @@ export default function CartWidget() {
     return (
         cantInCart()
             ?
-            <>
-                <Link to="/cart"><img src={carritoImg} alt="carrito" /></Link>
+            <div className="flex-row text-white">
+                <Link to="/cart"><img className="logoEdit" src={carritoImg} alt="carrito" /></Link>
                 {cantInCart()}
-            </>
+            </div>
             :
             <></>
     )

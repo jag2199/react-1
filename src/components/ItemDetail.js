@@ -15,14 +15,23 @@ export default function ItemDetail({ item }) {
 
     return (
         count
-            ? <>
-                <Item item={item} />
-                <Link to="/cart"><button>Finalizar compra</button></Link>
-            </>
-            : (<>
-                <Item item={item} />
-                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-            </>)
-
+            ? <div className="row justify-content-center align-items-center flex-row">
+                <div className="col-6">
+                    <Item item={item} />
+                </div>
+                <div className="col-6">
+                    <Link to="/cart"><button>Finalizar compra</button></Link>
+                </div>
+            </div>
+            : (
+                <div className="row justify-content-center align-items-center flex-row">
+                    <div className="col-6">
+                        <Item item={item} />
+                    </div>
+                    <div className="col-6">
+                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                    </div>
+                </div>
+            )
     )
 }

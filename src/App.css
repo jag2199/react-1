@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  min-height: 50rem;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -32,7 +34,41 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.logoEdit {
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.imgSize {
+  transform: scale(1.5);
+}
+
+.bg-belgrano {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/react-1-a3a46.appspot.com/o/belgrano4.png?alt=media&token=5c060624-5bfd-41d2-b3d4-46bd808efbd1");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-faq {
+  background-color: rgba(17, 136, 248, 0.65);
+}
+
+.letraTexto {
+  font-family: "Franklin Gothic Medium";
+}
+
+.carritoVacio {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
 }
