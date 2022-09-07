@@ -1,4 +1,4 @@
-# BuyAtOnce
+# Republica de 1905
 
 ## Descripción del proyecto
 
@@ -14,7 +14,7 @@ Las principales tecnologías usadas son:
   - React DOM
   - React Router
   - Firestore
-  - Css 
+  - Css
 
 ## Como levantar el proyecto
 
