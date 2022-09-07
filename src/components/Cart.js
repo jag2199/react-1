@@ -11,13 +11,13 @@ export default function Cart() {
         cart.length
             ?
             <>
-                <div className='container-fluid w-100 h-100'>
+                <div className='container-fluid'>
                     <h1>Carrito</h1>
-                    <div className='row justify-content-center align-items-center'>
+                    <div className='row justify-content-center align-items-center m-5'>
                         <CartItemList cart={cart} clear={clear} />
-                        <h2>Total: {totalCart()}</h2>
+                        <h2>Total: ${totalCart()}</h2>
                     </div>
-                    <div className='row justify-content-center align-items-center flex-row'>
+                    <div className='row justify-content-center align-items-center flex-row m-5'>
                         <div className='col-6'>
                             <Link to="/buy"><button>Comprar</button></Link>
                         </div>

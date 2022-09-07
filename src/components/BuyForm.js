@@ -74,15 +74,17 @@ export default function BuyForm() {
                     <Button onClick={comprar} variant="primary">
                         Comprar
                     </Button>
-                    <Link to="/cart"><Button variant="primary" >
-                        Volver al carrito
-                    </Button></Link>
+                    <Link to="/cart">
+                        <Button variant="primary" >
+                            Volver al carrito
+                        </Button>
+                    </Link>
                 </Form>
                 :
-                <div>
+                <div className='h-100'>
                     <h2>Gracias por su compra!</h2>
-                    <h3>Orden N° {orderId}</h3>
-                    <Link to="/"><button>Volver a página principal</button></Link>
+                    <h3 className='m-5'>Orden N° {orderId}</h3>
+                    <Link to="/"><button className='m-5'>Volver a página principal</button></Link>
                 </div>
             }
         </>
